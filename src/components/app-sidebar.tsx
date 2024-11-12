@@ -8,8 +8,10 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+    SidebarHeader,
 } from "@/components/ui/sidebar";
 
+import viteLogo from "/vite.svg";
 // Menu items.
 const items = [
   {
@@ -51,20 +53,22 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="bg-white">
+    <Sidebar className="bg-white text-gray-600 flex flex-row ">
+      <SidebarHeader>
+         <img src={viteLogo} className="logo" alt="Vite logo" />
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          {/* <SidebarGroupLabel>Swish</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title} className="align-middle">
+                <SidebarMenuItem key={item.title} className="">
                   <SidebarMenuButton
                     asChild
-                    className="text-black h-20 text-xl align-middle hover:text-blue-800"
+                    className="text-gray-600 h-20 text-lg align-middle hover:bg-blue-600 hover:text-white flex flex-row items-center rounded-3xl"
                   >
-                    <a href={item.url}>
-                      <item.icon size={48} />
+                    <a href={item.url} className="flex flex-row items-center">
+                      <item.icon size={40} />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>

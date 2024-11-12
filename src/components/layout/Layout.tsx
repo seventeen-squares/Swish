@@ -6,7 +6,7 @@ const user = {
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider open={true} className="bg-white">
+    <SidebarProvider open={true} className="">
       <AppSidebar />
       <main>
         <Navbar user={user} />
