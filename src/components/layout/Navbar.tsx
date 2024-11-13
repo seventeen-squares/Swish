@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
         {/* Profile */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="gap-2">
+            <Button variant="secondary" className="gap-2 rounded-xl">
               <Avatar className="h-8 w-8">
                 <AvatarImage
                   src="https://github.com/shadcn.png"
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
         {/* Notifications */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="secondary" size="icon" className="relative rounded-xl">
               <Bell className="h-10 w-10 text-gray-500" />
               {user.notifications && user.notifications > 0 && (
                 <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center bg-red-500">
@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
         {/* Language Selector */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
+            <Button variant="secondary" size="icon" className="rounded-xl">
               <Flag className="h-5 w-5 text-gray-500" />
             </Button>
           </DropdownMenuTrigger>
