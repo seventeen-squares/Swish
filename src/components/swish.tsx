@@ -12,6 +12,7 @@ export function Swish() {
   return (
       <>
           <p className="mb-6 text-2xl">Order Swish</p>
+
           <div className="flex justify-center items-start min-h-screen ">
               <div className="grid grid-cols-3 gap-4">
                   <div className="bg-white p-6 rounded-lg shadow-md col-span-2 text-left">
@@ -31,32 +32,39 @@ export function Swish() {
                       <div className="flex flex-col gap-4">
                           <Accordion type="multiple">
                               {items.map((item, index) => (
-                              <AccordionItem value={'value'+index} >
-                                  <AccordionTrigger className="bg-white">{item}</AccordionTrigger>
-                                  <AccordionContent>
-                                      {item + 1}
-                                  </AccordionContent>
-                              </AccordionItem>
-                          ))}
+                                  <AccordionItem value={'value' + index}>
+                                      <AccordionTrigger className="bg-white">{item}</AccordionTrigger>
+                                      <AccordionContent>
+                                          {item + 1}
+                                      </AccordionContent>
+                                  </AccordionItem>
+                              ))}
                           </Accordion>
 
                       </div>
 
-                      </div>
+                  </div>
 
 
-                      <div className="flex flex-col gap-4 col-span-1">
-                          {items.map((item, index) => (
+                  <div className="flex flex-col gap-4 col-span-1">
+                      {items.map((item, index) => (
+                          <div className="flex items-center">
 
                               <div className="flex items-center">
-                          <span
-                              className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-400 text-white">{index + 1}</span>
-                                  <span className="ml-2">{item}</span>
+                                  <div
+                                      className="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center mr-4">{index + 1}
+                                  </div>
+                                  <span>{item}</span>
+
                               </div>
-                          ))}
-                      </div>
+
+                          </div>
+                      ))}
                   </div>
               </div>
-          </>
-          );
-          }
+
+          </div>
+
+      </>
+  );
+}
