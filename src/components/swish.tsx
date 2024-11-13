@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import TimeLine from "@/components/stepper/TimeLine.tsx";
 
 export function Swish() {
     const items = [
@@ -14,8 +15,8 @@ export function Swish() {
           <p className="mb-6 text-2xl">Order Swish</p>
 
           <div className="flex justify-center items-start min-h-screen ">
-              <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-white p-6 rounded-lg shadow-md col-span-2 text-left">
+              <div className="grid grid-cols-4 gap-4">
+                  <div className="bg-white p-6 rounded-lg shadow-md col-span-3 text-left">
                       <h2 className="text-md font-medium mb-5 uppercase text-gray-500">to order swish</h2>
                       <div className="flex flex-col gap-4 border-b-2">
                           <ul className="marker:text-blue-800 marker:text-2xl list-disc pl-5 space-y-3 ">
@@ -47,20 +48,18 @@ export function Swish() {
 
 
                   <div className="flex flex-col gap-4 col-span-1">
-                      {items.map((item, index) => (
+
                           <div className="flex items-center">
 
                               <div className="flex items-center">
-                                  <div
-                                      className="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center mr-4">{index + 1}
-                                  </div>
-                                  <span>{item}</span>
+
+                                  <TimeLine />
 
                               </div>
 
                           </div>
-                      ))}
                   </div>
+
               </div>
 
           </div>
