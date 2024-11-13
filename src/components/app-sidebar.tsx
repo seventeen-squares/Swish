@@ -65,7 +65,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title} className="">
                   <SidebarMenuButton
                     asChild
-                    className="text-gray-600 h-20 text-lg align-middle hover:bg-blue-600 hover:text-white flex flex-row items-center rounded-3xl"
+                    className="text-gray-600 h-18 text-lg mb-4 hover:bg-blue-600 hover:text-white flex flex-row items-center rounded-2xl"
                   >
                     <a href={item.url} className="flex flex-row items-center">
                       <item.icon size={40} />
